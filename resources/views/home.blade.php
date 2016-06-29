@@ -67,7 +67,7 @@
                         <h1>DevLdn</h1>
                         <h3>London Ontario's Developer Community</h3>
                         <hr class="intro-divider">
-                        <form action="{{ route('slack.register') }}">
+                        <form action="{{ route('slack.register') }}" method="POST">
                             {{ csrf_field() }}
                             <div class="form-group">
                                 <label for="email" class="control-label">Join Our Slack Channel</label>
