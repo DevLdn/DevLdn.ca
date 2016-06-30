@@ -42,7 +42,7 @@ class Client
             '_attempts'  => '1',
         ]);
         if ($response->ok !== true) {
-            throw new \Exception('Slack API responded with error:' . $response->error);
+            throw SlackApiException::createFromApiResponse($response);
         }
     }
 

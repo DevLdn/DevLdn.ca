@@ -69,9 +69,10 @@
                         <hr class="intro-divider">
                         <form action="{{ route('slack.register') }}" method="POST">
                             {{ csrf_field() }}
-                            <div class="form-group">
+                            <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
                                 <label for="email" class="control-label">Join Our Slack Channel</label>
                                 <input type="email" name="email" class="form-control" placeholder="Enter your Email address...">
+                                <span class="help-block">{{ $errors->has('email') ? $errors->first('email') : '' }}</span>
                             </div>
                             <div class="checkbox">
                                 <label for="newsletter"><input name="newsletter" type="checkbox" value="">Sign-up for our monthly newsletter</label>
@@ -150,6 +151,29 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
+<script>
+    var $form = $('form');
+    $form.on('submit', function (e) {
+        e.preventDefault();
+        $.ajax({
+            type : 'POST',
+            url  : $form.attr('action'),
+            data : $form.serialize()
+        }).done(function (response) {
+            console.log(response);
+            $form.find('.form-group')
+                    .removeClass('has-error')
+                    .addClass('has-success');
+            $form.find('.help-block').text($.parseJSON(response.responseText).message);
+        }).fail(function (response) {
+            console.log(response);
+            $form.find('.form-group')
+                    .removeClass('has-success')
+                    .addClass('has-error');
+            $form.find('.help-block').text($.parseJSON(response.responseText).errors.email);
+        });
+    });
+</script>
 </body>
 
 </html>
