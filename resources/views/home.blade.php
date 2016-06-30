@@ -74,9 +74,9 @@
                                 <input type="email" name="email" class="form-control" placeholder="Enter your Email address...">
                                 <span class="help-block">{{ $errors->has('email') ? $errors->first('email') : '' }}</span>
                             </div>
-                            <div class="checkbox">
-                                <label for="newsletter"><input name="newsletter" type="checkbox" value="">Sign-up for our monthly newsletter</label>
-                            </div>
+                            {{--<div class="checkbox">--}}
+                                {{--<label for="newsletter"><input name="newsletter" type="checkbox" value="">Sign-up for our monthly newsletter</label>--}}
+                            {{--</div>--}}
                             <button type="submit" class="btn btn-primary">Join</button>
                         </form>
                     </div>
