@@ -124,7 +124,7 @@
                     <p class="lead">Hang out and discuss JavaScript, CSS and other front-end related tips, tricks, hacks, and frameworks with some of the other local developers. Show off cool stuff you've done and learn about what else is going on in the community. No pressure, no mandatory presentations at our <a target="_blank" href="http://www.meetup.com/London-Front-end-Development-Meetup">Front-End Meetup</a>.</p>
                 </div>
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <img class="img-responsive" src="img/front-end-logo.png" alt="">
+                    <img class="img-responsive" src="img/front-end-logo.svg" alt="">
                 </div>
             </div>
 
