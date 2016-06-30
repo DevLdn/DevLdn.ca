@@ -151,29 +151,7 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-<script>
-    var $form = $('form');
-    $form.on('submit', function (e) {
-        e.preventDefault();
-        $.ajax({
-            type : 'POST',
-            url  : $form.attr('action'),
-            data : $form.serialize()
-        }).done(function (response) {
-            console.log(response);
-            $form.find('.form-group')
-                    .removeClass('has-error')
-                    .addClass('has-success');
-            $form.find('.help-block').text($.parseJSON(response.responseText).message);
-        }).fail(function (response) {
-            console.log(response);
-            $form.find('.form-group')
-                    .removeClass('has-success')
-                    .addClass('has-error');
-            $form.find('.help-block').text($.parseJSON(response.responseText).errors.email);
-        });
-    });
-</script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
