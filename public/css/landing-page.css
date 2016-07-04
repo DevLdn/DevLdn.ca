@@ -22,7 +22,7 @@ h6 {
 }
 
 .topnav {
-    font-size: 14px; 
+    font-size: 14px;
     background: #FFF;
 }
 
@@ -40,7 +40,7 @@ h6 {
     padding-bottom: 50px;
     text-align: center;
     color: #fff;
-    background: url(../img/code.png) no-repeat center center;
+    background: url(../img/code.jpg) no-repeat center center;
     background-size: cover;
 }
 

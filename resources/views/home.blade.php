@@ -50,6 +50,10 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#php-meetup">PHP Meetup</a></li>
+                    <li><a href="#fed-meetup">Front-End Meetup</a></li>
+                </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -91,7 +95,7 @@
 
     <!-- Page Content -->
 
-    <div class="content-section-a">
+    <div class="content-section-a" id="php-meetup">
 
         <div class="container">
             <div class="row">
@@ -112,7 +116,7 @@
     </div>
     <!-- /.content-section-a -->
 
-    <div class="content-section-b">
+    <div class="content-section-b" id="fed-meetup">
 
         <div class="container">
 
