@@ -11,7 +11,7 @@
             app.$form.find('.form-group')
                 .removeClass('has-error')
                 .addClass('has-success');
-            app.$form.find('.help-block').text($.parseJSON(response.responseText).message);
+            app.$form.find('.help-block').text(response.message);
         }).fail(function (response) {
             app.$form.find('.form-group')
                 .removeClass('has-success')

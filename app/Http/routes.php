@@ -37,7 +37,7 @@ Route::post('/', [
             return redirect('/')->withErrors(['email' => $e->getMessage()])->withInput();
         }
 
-        return $request->ajax() ? new JsonResponse : redirect('/');
+        return $request->ajax() ? new JsonResponse(['message' => 'Invitation Sent!']) : redirect('/');
     }
 ]);
 
