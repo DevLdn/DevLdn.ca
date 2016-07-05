@@ -8,18 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    @include('meta')
 
     <title>DevLdn -- London Ontario's Developer Community.</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/landing-page.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="{{ elixir('css/all.css') }}" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -44,7 +37,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand topnav" href="#">
-                    <img src="/img/devldn_vertical.png" alt="DevLdn Logo" height="35px" width="100px">
+                    <img src="{{ elixir('images/devldn_vertical.png') }}" alt="DevLdn Logo" height="35px" width="100px">
                     <span class="text-hide">DevLdn</span>
                 </a>
             </div>
@@ -103,10 +96,10 @@
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading">PHP Meetup</h2>
-                    <p class="lead">Learn and network with other PHP developers every 3rd Wednesday of the month at our <a target="_blank" href="www.meetup.com/London-PHP-Meetup">PHP Meetup</a></p>
+                    <p class="lead">Learn and network with other PHP developers every 3rd Wednesday of the month at our <a target="_blank" href="http://www.meetup.com/London-PHP-Meetup">PHP Meetup</a></p>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/php-logo.png" alt="PHP">
+                    <img class="img-responsive" src="{{ elixir('images/php-logo.png') }}" alt="PHP">
                 </div>
             </div>
 
@@ -128,7 +121,7 @@
                     <p class="lead">Hang out and discuss JavaScript, CSS and other front-end related tips, tricks, hacks, and frameworks with some of the other local developers. Show off cool stuff you've done and learn about what else is going on in the community. No pressure, no mandatory presentations at our <a target="_blank" href="http://www.meetup.com/London-Front-end-Development-Meetup">Front-End Meetup</a>.</p>
                 </div>
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <img class="img-responsive" src="img/front-end-logo.svg" alt="">
+                    <img class="img-responsive" src="{{ elixir("images/front-end-logo.svg") }}" alt="">
                 </div>
             </div>
 
@@ -149,13 +142,7 @@
         </div>
     </footer>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <script src="js/app.js"></script>
+    <script src="{{ elixir('js/all.js') }}"></script>
 </body>
 
 </html>
