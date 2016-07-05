@@ -1,3 +1,6 @@
 * text=auto
 *.css linguist-vendored
 *.scss linguist-vendored
+public/build/* binary
+public/css/all.css binary
+public/js/all.js binary
