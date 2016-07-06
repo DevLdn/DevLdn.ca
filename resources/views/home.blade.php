@@ -142,6 +142,7 @@
         </div>
     </footer>
 
+    @include('analytics')
     <script src="{{ elixir('js/all.js') }}"></script>
 </body>
 
