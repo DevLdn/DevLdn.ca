@@ -66,15 +66,22 @@
                         <hr class="intro-divider">
                         <form action="{{ route('slack.register') }}" method="POST">
                             {{ csrf_field() }}
-                            <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
+                            <div class="col-md-6 col-md-offset-3 form-group {{ $errors->has('email') ? 'has-error' : '' }}">
                                 <label for="email" class="control-label">Join Our Slack Channel</label>
-                                <input type="email" name="email" class="form-control" placeholder="Enter your Email address...">
-                                <span class="help-block">{{ $errors->has('email') ? $errors->first('email') : '' }}</span>
+                                <div class="input-group">
+                                    <input
+                                            type="email"
+                                            name="email"
+                                            class="form-control input-lg"
+                                            placeholder="Enter your Email address...">
+                                    <span class="help-block">
+                                        {{ $errors->has('email') ? $errors->first('email') : '' }}
+                                    </span>
+                                    <span class="input-group-btn">
+                                        <button type="submit" class="btn btn-primary btn-lg">Join</button>
+                                    </span>
+                                </div>
                             </div>
-                            {{--<div class="checkbox">--}}
-                                {{--<label for="newsletter"><input name="newsletter" type="checkbox" value="">Sign-up for our monthly newsletter</label>--}}
-                            {{--</div>--}}
-                            <button type="submit" class="btn btn-primary">Join</button>
                         </form>
                     </div>
                 </div>
