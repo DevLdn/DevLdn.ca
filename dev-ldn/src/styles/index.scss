@@ -1,4 +1,6 @@
+/* stylelint-disable */
 @import '_variables.scss';
+@import '_app.scss';
 
 body {
     margin: 0;
@@ -11,3 +13,4 @@ body {
 code {
     font-family: $code-font;
 }
+/* stylelint-enable */
