@@ -2,6 +2,26 @@
 $app-font: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
 $code-font: 'Courier New', monospace;
 
-$black: #000;
 $white: #fff;
+$off-white: #f9f9f9;
+$light-grey: #ededed;
+$mid-grey: #999;
+$mute-grey: #383838;
+$dark-grey: #272525;
+$black: #000;
+
+$brand-color: #009cd8;
+$dark-brand-color: darken($brand-color, 20%);
+
+$text-color: rgb(40, 38, 37);
+$link-color: $brand-color;
+
+$max-width: 1180px;
+$mobile-size: 400px;
+$phablet-size: 675px;
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+);
 /* stylelint-enable */
