@@ -10,11 +10,13 @@ $mute-grey: #383838;
 $dark-grey: #272525;
 $black: #000;
 
-$brand-color: #009cd8;
-$dark-brand-color: darken($brand-color, 20%);
+$primary-color: #BAC54B;
+$dark-primary-color: darken($primary-color, 20%);
+$secondary-color: #639ACF;
+$tertiary-color: #f7b733;
 
 $text-color: rgb(40, 38, 37);
-$link-color: $brand-color;
+$link-color: $primary-color;
 
 $max-width: 1180px;
 $mobile-size: 400px;

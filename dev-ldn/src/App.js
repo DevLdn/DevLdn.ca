@@ -5,12 +5,19 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        <header>
           {/* <img src={logo} className="App-logo" alt="logo" /> */}
-          <button>join slack</button>
-          <button>join meetup</button>
+          <h1>Dev London</h1>
+          <div className="action-container">
+            <button className="call-to-action secondary">
+              join the community
+            </button>
+            <button className="call-to-action tertiary">
+              come to an event
+            </button>
+          </div>
         </header>
-        <body>div.</body>
+        <div className="body">things will live here</div>
       </div>
     );
   }
