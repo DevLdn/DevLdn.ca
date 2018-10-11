@@ -9,5 +9,5 @@ body {
 }
 
 code {
-    font-family: 'Courier New', monospace;
+    font-family: $code-font;
 }
