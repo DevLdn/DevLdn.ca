@@ -70,7 +70,7 @@ class App extends Component {
               <Icon name="led" width={50} fill={`#f7b733`} />
             </div>
             <div className="title">
-              <h2>Topics Open</h2>
+              <h2>Your Ideas</h2>
             </div>
             <div className="caption">
               <p>
