@@ -37,7 +37,7 @@ header {
     }
 
     &::after {
-        background: rgba( $black, .7 );
+        background: rgba( $primary-color, .3 );
         height: 800px;
         width: 100%;
         content: '';
@@ -48,21 +48,34 @@ header {
     }
 
     h1 {
+        font-family: $headline-font;
+        font-size: 5em;
+        text-transform: uppercase;
+        line-height: 1.25em;
+        letter-spacing: 5px;
         color: $white;
-        font-size: 4em;
+
+        .pop {
+            color: $tertiary-color;
+        }
     }
+}
+
+.logo {
+    width: 500px;
 }
 
 .action-container {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 1em;
 }
 
 .call-to-action {
     color: $white;
-    font-weight: 500;
-    font-size: 1.5em;
+    font-weight: 700;
+    font-size: 1.25em;
     padding: .5em 2em;
     margin: 2em;
     border: none;
@@ -71,16 +84,50 @@ header {
     align-items: center;
     justify-content: center;
     line-height: 1.25em;
+}
 
-    &.primary {
-        background: $primary-color;
+.slack {
+    background: $slack;
+    position: relative;
+    padding-left: 4em;
+
+    img {
+        background: $white;
+        padding: .5em;
+        border-radius: 60px;
+        height: 60px;
+        width: 60px;
+        position: absolute;
+        left: -1em;
     }
+}
 
-    &.secondary {
-        background: $secondary-color;
+.meetup {
+    background: $meetup;
+    position: relative;
+    padding-left: 4em;
+
+    img {
+        background: $white;
+        border-radius: 60px;
+        padding: .5em;
+        position: absolute;
+        left: -1em;
+        height: 60px;
+        width: 60px;
     }
+}
 
-    &.tertiary {
-        background: $tertiary-color;
+.info {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding-top: 2em;
+
+    .section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
     }
 }

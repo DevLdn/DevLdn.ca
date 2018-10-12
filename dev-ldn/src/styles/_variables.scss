@@ -1,6 +1,7 @@
 /* stylelint-disable */
 $app-font: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
 $code-font: 'Courier New', monospace;
+$headline-font: 'Teko', sans-serif;
 
 $white: #fff;
 $off-white: #f9f9f9;
@@ -10,10 +11,13 @@ $mute-grey: #383838;
 $dark-grey: #272525;
 $black: #000;
 
-$primary-color: #BAC54B;
+$primary-color: #bac54b;
 $dark-primary-color: darken($primary-color, 20%);
-$secondary-color: #639ACF;
+$secondary-color: #639acf;
 $tertiary-color: #f7b733;
+
+$slack: #72C5CD;
+$meetup: #ED1C40;
 
 $text-color: rgb(40, 38, 37);
 $link-color: $primary-color;
