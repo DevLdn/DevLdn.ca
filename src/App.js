@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import slack from './assets/slack.svg';
 import meetup from './assets/meetup.png';
-
 import Icon from './assets/icons';
 
 class App extends Component {
@@ -40,9 +39,14 @@ class App extends Component {
               <h2>Event Calendar</h2>
             </div>
             <div className="caption">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>
+                We meet on the last Wednesday of every month. See what's coming
+                up by checking out our public calendar!
+              </p>
             </div>
-            <button>View Calendar</button>
+            <button className="bg-2 shadow">
+              <Icon name="calendar" width={30} fill={`#fff`} /> View Calendar
+            </button>
           </div>
           <div className="section">
             <div className="icon">
@@ -52,21 +56,31 @@ class App extends Component {
               <h2>Volunteer Positions</h2>
             </div>
             <div className="caption">
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
+              <p>
+                We run based on volunteer time. Have a free night available?
+                Want to give back? See what's available!
+              </p>
             </div>
-            <button>Show Me</button>
+            <button className="bg-1 shadow">
+              <Icon name="puzzle" width={30} fill={`#fff`} /> Volunteer
+            </button>
           </div>
           <div className="section">
             <div className="icon">
               <Icon name="led" width={50} fill={`#f7b733`} />
             </div>
             <div className="title">
-              <h2>Submit Idea</h2>
+              <h2>Topics Open</h2>
             </div>
             <div className="caption">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>
+                Do you have a talk you'd like to give? A workshop you'd like to
+                run? A panel discussion? Sign up!
+              </p>
             </div>
-            <button>Get Started</button>
+            <button className="bg-3 shadow">
+              <Icon name="led" width={30} fill={`#fff`} /> Submit Idea
+            </button>
           </div>
         </div>
       </div>
