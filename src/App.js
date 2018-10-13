@@ -9,21 +9,30 @@ class App extends Component {
       <div className="App">
         <header>
           {/* <img src={logo} className="logo" alt="Dev London logo" /> */}
-          {/* <p>Bringing the Forest City tech community together.</p> */}
           <h1>
             Bringing tech <span className="pop">together</span>
             <br />
             in the <span className="pop">Forest City</span>
           </h1>
+          <p>
+            Dev London is your opportunity to gather insights and get inspired
+            by the most influential software professionals. Hear their stories,
+            ask them questions, network with others in the industry.
+            Refreshments are on us!
+          </p>
           <div className="action-container">
-            <button className="call-to-action slack shadow">
-              <img src={slack} className="slack-img shadow" alt="Slack logo" />
+            <button className="call-to-action slack grow shadow">
+              <img
+                src={slack}
+                className="slack-img left shadow"
+                alt="Slack logo"
+              />
               Join the community
             </button>
-            <button className="call-to-action meetup shadow">
+            <button className="call-to-action meetup grow shadow">
               <img
                 src={meetup}
-                className="meetup-img shadow"
+                className="meetup-img right shadow"
                 alt="Meetup logo"
               />
               Come to an event
