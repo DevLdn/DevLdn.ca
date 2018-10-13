@@ -170,6 +170,7 @@ button {
     background: $primary-color;
     padding: .5em 2em;
     display: flex;
+    cursor: pointer;
     align-items: center;
     color: $white;
     font-size: 1em;
@@ -179,5 +180,9 @@ button {
 
     svg {
         margin-right: .5em;
+    }
+
+    &:hover {
+        box-shadow: 0 3px 5px rgba( $black, .2 );
     }
 }
