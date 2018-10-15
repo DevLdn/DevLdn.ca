@@ -8,7 +8,6 @@ class App extends Component {
     return (
       <div className="App">
         <header>
-          {/* <img src={logo} className="logo" alt="Dev London logo" /> */}
           <h1>
             Bringing tech <span className="pop">together</span>
             <br />
@@ -29,14 +28,18 @@ class App extends Component {
               />
               Join the community
             </button>
-            <button className="call-to-action meetup grow shadow">
+            <a
+              className="call-to-action meetup grow shadow"
+              target="_blank"
+              href="https://www.meetup.com/Dev-London/"
+            >
               <img
                 src={meetup}
                 className="meetup-img right shadow"
                 alt="Meetup logo"
               />
               Come to an event
-            </button>
+            </a>
           </div>
         </header>
         <div className="info">
@@ -49,8 +52,8 @@ class App extends Component {
             </div>
             <div className="caption">
               <p>
-                We meet on the last Wednesday of every month. See what's coming
-                up by checking out our public calendar!
+                We meet on the last Tuesday of every month. See what's coming up
+                by checking out our public calendar!
               </p>
             </div>
             <button className="bg-2 shadow">
