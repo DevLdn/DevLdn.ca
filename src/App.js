@@ -30,7 +30,6 @@ class App extends Component {
             </button>
             <a
               className="call-to-action meetup grow shadow"
-              target="_blank"
               href="https://www.meetup.com/Dev-London/"
             >
               <img
