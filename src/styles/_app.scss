@@ -151,12 +151,12 @@ header {
     }
 
     h2 {
-        font-family: $handwriting-font;
+        font-family: $headline-font;
         font-size: 2em;
         font-weight: 500;
         letter-spacing: 2px;
         color: $text-color;
-        margin: 0 0 .5em;
+        margin: .5em 0;
     }
 
     .caption {
