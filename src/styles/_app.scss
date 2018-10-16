@@ -79,6 +79,7 @@ header {
     align-items: center;
     justify-content: center;
     margin-top: 1em;
+    position: relative;
 }
 
 .call-to-action {
@@ -98,6 +99,7 @@ header {
     text-decoration: none;
     width: 310px;
     position: relative;
+    transition: all 200ms ease;
 
     &.slack {
         background: $slack;

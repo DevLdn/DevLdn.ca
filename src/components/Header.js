@@ -16,7 +16,7 @@ class Header extends Component {
   }
 
   render() {
-    let slack_class = this.state.button ? 'button' : 'form';
+    let slack_class = this.state.button ? 'shrink' : 'explode';
 
     return (
       <header>
@@ -32,17 +32,23 @@ class Header extends Component {
           on us!
         </p>
         <div className="action-container">
-          <button
-            className={`call-to-action slack grow shadow ${slack_class}`}
-            onClick={this.morphForm.bind(this)}
-          >
+          <div className={`call-to-action slack grow shadow ${slack_class}`}>
             <img
               src={slack}
               className="slack-img left shadow"
               alt="Slack logo"
             />
-            Join the community
-          </button>
+            <span className="content" onClick={this.morphForm.bind(this)}>
+              Join the community
+            </span>
+            <div className="form">
+              <h2>Join DevLdn Slack</h2>
+              <input type="email" />
+              <button onClick={this.morphForm.bind(this)}>
+                request invite
+              </button>
+            </div>
+          </div>
           <a
             className="call-to-action meetup grow shadow"
             href="https://www.meetup.com/Dev-London/"

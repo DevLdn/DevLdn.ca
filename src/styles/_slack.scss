@@ -1,10 +1,44 @@
-.slack {
+.shrink {
+    transition: opacity 1, height 100ms, width 500ms 100ms;
 
-    &.button {
-        background: $white;
+    .form {
+        opacity: 0;
+        display: none;
+        transform: translateY( -100px );
+        transition: opacity 100ms 500ms, transform 400ms 500ms, display 500ms;
+    }
+}
+
+.explode {
+    position: absolute;
+    z-index: 1;
+    top: -1em;
+    margin-left: 0;
+    width: 80%;
+
+    img {
+        top: -1em;
     }
 
-    &.form {
-        background: $black;
+    .content {
+        display: none;
+    }
+
+    .form {
+        display: block;
+        color: $black;
+        margin-left: 0;
+        width: 80%;
+        opacity: 1;
+        transform: translateY( 0 );
+        transition: display .1s, opacity 100ms 500ms, transform 400ms .5s;
+
+        h2 {
+            margin: 0;
+        }
+
+        button {
+            border-radius: 10px;
+        }
     }
 }
