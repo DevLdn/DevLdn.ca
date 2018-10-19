@@ -1,44 +1,58 @@
 .shrink {
-    transition: opacity 1, height 100ms, width 500ms 100ms;
 
     .form {
         opacity: 0;
         display: none;
-        transform: translateY( -100px );
-        transition: opacity 100ms 500ms, transform 400ms 500ms, display 500ms;
+        margin-left: 0;
     }
 }
 
 .explode {
-    position: absolute;
-    z-index: 1;
-    top: -1em;
-    margin-left: 0;
-    width: 80%;
 
     img {
-        top: -1em;
-    }
-
-    .content {
-        display: none;
+        top: -.75em;
     }
 
     .form {
-        display: block;
+        animation: slide 500ms 1 ease-in-out;
         color: $black;
         margin-left: 0;
-        width: 80%;
-        opacity: 1;
-        transform: translateY( 0 );
-        transition: display .1s, opacity 100ms 500ms, transform 400ms .5s;
+        margin-bottom: 1em;
 
-        h2 {
-            margin: 0;
+        input {
+            padding: .5em .75em;
+            margin: .5em 0 1em;
+            width: 100%;
+            font-size: 1em;
+            border: none;
         }
 
         button {
+            font-size: .85em;
             border-radius: 10px;
         }
+    }
+}
+
+@keyframes slide {
+
+    0% {
+        opacity: 0;
+        display: none;
+        transform: translateY( -50px );
+        height: 0;
+    }
+
+    50% {
+        height: 110px;
+    }
+
+    60% {
+        transform: translateY( 0 );
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
     }
 }

@@ -22,7 +22,7 @@ header {
     flex-direction: column;
 
     &::before {
-        background-image: url( '../assets/header.jpg' );
+        background-image: url( '../assets/forest.jpg' );
         background-repeat: none;
         background-position: center top;
         background-size: cover;
@@ -76,39 +76,45 @@ header {
 
 .action-container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     margin-top: 1em;
     position: relative;
+    width: 950px;
+    min-height: 200px;
 }
 
 .call-to-action {
+    align-items: center;
+    border-radius: 25px;
+    border: none;
     color: $white;
     cursor: pointer;
-    flex: 1;
-    font-weight: 700;
-    font-size: 1.25em;
-    padding: .25em 2em;
-    margin: 0 2em;
-    border: none;
-    border-radius: 40px;
     display: flex;
-    align-items: center;
+    flex-grow: 1;
+    font-size: 1.25em;
+    font-weight: 700;
     justify-content: center;
     line-height: 2em;
-    text-decoration: none;
-    width: 310px;
+    margin: 0 2em;
+    padding: .25em 4em;
     position: relative;
+    text-decoration: none;
     transition: all 200ms ease;
 
     &.slack {
         background: $slack;
-        padding-left: 4em;
+        padding-left: 6em;
+        width: 160px;
+
+        .content {
+            width: 100%;
+        }
     }
 
     &.meetup {
         background: $meetup;
-        padding-right: 4em;
+        padding-right: 5em;
     }
 
     .left {

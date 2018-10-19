@@ -38,16 +38,20 @@ class Header extends Component {
               className="slack-img left shadow"
               alt="Slack logo"
             />
-            <span className="content" onClick={this.morphForm.bind(this)}>
-              Join the community
+            <span className="content">
+              <span onClick={this.morphForm.bind(this)}>
+                Join the community
+              </span>
+              <div className="form">
+                <input type="email" placeholder="email address" />
+                <button
+                  className="bg-2 shadow"
+                  onClick={this.morphForm.bind(this)}
+                >
+                  Request Invite
+                </button>
+              </div>
             </span>
-            <div className="form">
-              <h2>Join DevLdn Slack</h2>
-              <input type="email" />
-              <button onClick={this.morphForm.bind(this)}>
-                request invite
-              </button>
-            </div>
           </div>
           <a
             className="call-to-action meetup grow shadow"
