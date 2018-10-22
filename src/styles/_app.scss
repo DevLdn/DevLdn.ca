@@ -22,9 +22,9 @@ header {
     flex-direction: column;
 
     &::before {
-        background-image: url( '../assets/forest.jpg' );
+        background-image: url( '../assets/header.jpg' );
         background-repeat: none;
-        background-position: center top;
+        background-position: center bottom;
         background-size: cover;
         content: '';
         height: 800px;
@@ -45,6 +45,17 @@ header {
         top: 0;
         left: 0;
         z-index: -1;
+    }
+
+    .handshake {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+
+        .logo {
+            height: 150px;
+            margin-right: 2em;
+        }
     }
 
     h1 {
@@ -70,10 +81,6 @@ header {
     }
 }
 
-.logo {
-    width: 500px;
-}
-
 .action-container {
     display: flex;
     align-items: flex-start;
@@ -82,6 +89,7 @@ header {
     position: relative;
     width: 950px;
     min-height: 200px;
+    z-index: 2;
 }
 
 .call-to-action {
@@ -148,6 +156,17 @@ header {
     width: 100%;
     justify-content: space-around;
     padding: 4em 0;
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        height: 200px;
+        position: absolute;
+        top: -8em;
+        background-image: url( '../assets/skyline.svg' );
+        width: 100vw;
+    }
 
     .section {
         display: flex;
@@ -156,6 +175,7 @@ header {
         justify-content: space-between;
         max-width: 400px;
         white-space: pre-wrap;
+        z-index: 2;
     }
 
     h2 {
@@ -176,8 +196,7 @@ header {
     }
 }
 
-button {
-    background: $primary-color;
+button, .button {
     padding: .5em 2em;
     display: flex;
     cursor: pointer;
@@ -187,6 +206,7 @@ button {
     font-weight: 700;
     border-radius: 40px;
     border: none;
+    text-decoration: none;
 
     svg {
         margin-right: .5em;

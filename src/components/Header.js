@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import logo from '../assets/dev-ldn_white.png';
 import slack from '../assets/slack.svg';
 import meetup from '../assets/meetup.png';
 
@@ -20,11 +21,14 @@ class Header extends Component {
 
     return (
       <header>
-        <h1>
-          Bringing tech <span className="pop">together</span>
-          <br />
-          in the <span className="pop">Forest City</span>
-        </h1>
+        <div className="handshake">
+          <img src={logo} className="logo" alt="Dev London logo" />
+          <h1>
+            Bringing tech <span className="pop">together</span>
+            <br />
+            in the <span className="pop">Forest City</span>
+          </h1>
+        </div>
         <p>
           Dev London is your opportunity to gather insights and get inspired by
           the most influential software professionals. Hear their stories, ask
@@ -56,6 +60,7 @@ class Header extends Component {
           <a
             className="call-to-action meetup grow shadow"
             href="https://www.meetup.com/Dev-London/"
+            target="_blank"
           >
             <img
               src={meetup}
