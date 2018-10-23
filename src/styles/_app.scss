@@ -187,21 +187,34 @@ header {
     }
 
     .caption {
-        margin-bottom: 2em;
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 1em;
         text-align: center;
+        height: 110px;
         line-height: 1.5em;
-        font-size: 1.25em;
+        font-size: 1em;
         color: $text-color;
+    }
+
+    .button {
+        background-color: darken($primary-color, 10%);
+        transition: background-color 200ms ease;
+
+        &:hover {
+            background: darken($primary-color, 20%);
+            transition: background-color 200ms ease;
+        }
     }
 }
 
 button, .button {
-    padding: .5em 2em;
+    padding: 1em 2em;
     display: flex;
     cursor: pointer;
     align-items: center;
     color: $white;
-    font-size: 1em;
+    font-size: 1.25em;
     font-weight: 700;
     border-radius: 40px;
     border: none;
@@ -212,16 +225,18 @@ button, .button {
     }
 
     &:hover {
+        background: darken($primary-color, 10%);
         box-shadow: 0 3px 5px rgba( $black, .2 );
     }
 }
 
 .sponsor {
-    height: 300px;
+    height: 350px;
     background: $light-green;
     color: $white;
     position: relative;
     margin-top: 10em;
+    padding: 2em 0;
 
     &::before {
         content: '';
@@ -231,6 +246,40 @@ button, .button {
         top: -6em;
         background-image: url( '../assets/forest-light2.svg' );
         width: 100vw;
+    }
+
+    p {
+        color: $text-color;
+        font-size: 1.25em;
+        text-align: center;
+    }
+
+    .sponsor-container {
+        display: flex;
+        width: 80vw;
+        max-width: 1400px;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .logo {
+            background: $white;
+            height: 100px;
+            width: 100px;
+            border-radius: 100px;
+            margin: 1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 1em;
+
+            img {
+                max-width: 80%;
+                max-height: 80%;
+            }
+        }
     }
 }
 

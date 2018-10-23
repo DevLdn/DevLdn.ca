@@ -7,7 +7,7 @@ class Info extends Component {
       <div className="info">
         <div className="section">
           <div className="icon">
-            <Icon name="calendar" width={50} fill={`#639acf`} />
+            <Icon name="calendar" width={50} fill={`#3e3e3e`} />
           </div>
           <div className="title">
             <h2>Event Calendar</h2>
@@ -19,17 +19,17 @@ class Info extends Component {
             </p>
           </div>
           <a
-            className="button bg-2 shadow"
+            className="button shadow"
             href="https://www.meetup.com/Dev-London/events/calendar/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Icon name="calendar" width={30} fill={`#fff`} /> View Calendar
+            View Calendar
           </a>
         </div>
         <div className="section">
           <div className="icon">
-            <Icon name="puzzle" width={50} fill={`#bac54b`} />
+            <Icon name="puzzle" width={50} fill={`#3e3e3e`} />
           </div>
           <div className="title">
             <h2>Volunteer Positions</h2>
@@ -41,17 +41,17 @@ class Info extends Component {
             </p>
           </div>
           <a
-            className="button bg-1 shadow"
+            className="button shadow"
             href="https://goo.gl/forms/iyx32mXrMsfRdjTw2"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Icon name="puzzle" width={30} fill={`#fff`} /> Volunteer
+            Volunteer
           </a>
         </div>
         <div className="section">
           <div className="icon">
-            <Icon name="led" width={50} fill={`#f7b733`} />
+            <Icon name="led" width={50} fill={`#3e3e3e`} />
           </div>
           <div className="title">
             <h2>Your Ideas</h2>
@@ -63,12 +63,12 @@ class Info extends Component {
             </p>
           </div>
           <a
-            className="button bg-3 shadow"
+            className="button shadow"
             href="https://goo.gl/forms/Uw69BK0kNZy22BCy1"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Icon name="led" width={30} fill={`#fff`} /> Submit Idea
+            Submit Idea
           </a>
         </div>
       </div>
