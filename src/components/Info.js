@@ -22,6 +22,7 @@ class Info extends Component {
             className="button bg-2 shadow"
             href="https://www.meetup.com/Dev-London/events/calendar/"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <Icon name="calendar" width={30} fill={`#fff`} /> View Calendar
           </a>
@@ -60,6 +61,7 @@ class Info extends Component {
             className="button bg-3 shadow"
             href="https://goo.gl/forms/Uw69BK0kNZy22BCy1"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <Icon name="led" width={30} fill={`#fff`} /> Submit Idea
           </a>

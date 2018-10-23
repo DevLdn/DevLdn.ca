@@ -4,17 +4,45 @@ import slack from '../assets/slack.svg';
 import meetup from '../assets/meetup.png';
 
 class Header extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
-      button: true
+      button: true,
+      email: '',
+      error: null,
+      isLoading: false
     };
   }
 
   morphForm() {
     this.setState({ button: !this.state.button });
   }
+
+  handleSubmit = () => {
+    if (!this.state.email) {
+      this.setState({ error: 'you fucked it up' });
+      return;
+    }
+
+    this.setState({ error: null, isLoading: false });
+
+    fetch('http://localhost:3001/invite', {
+      method: 'post',
+      body: JSON.stringify({ email: this.state.email }),
+      headers: { 'Content-Type': 'application/json' }
+    })
+      .then(res => res.json())
+      .then(json => {
+        this.setState({
+          error: null,
+          isLoading: false,
+          email: '',
+          button: !this.state.button
+        });
+      })
+      .catch(error => this.setState({ error, isLoading: false }));
+  };
 
   render() {
     let slack_class = this.state.button ? 'shrink' : 'explode';
@@ -47,11 +75,15 @@ class Header extends Component {
                 Join the community
               </span>
               <div className="form">
-                <input type="email" placeholder="email address" />
-                <button
-                  className="bg-2 shadow"
-                  onClick={this.morphForm.bind(this)}
-                >
+                <input
+                  type="text"
+                  name="email"
+                  placeholder="email address"
+                  onChange={e =>
+                    this.setState({ [e.target.name]: e.target.value })
+                  }
+                />
+                <button className="bg-2 shadow" onClick={this.handleSubmit}>
                   Request Invite
                 </button>
               </div>
@@ -61,6 +93,7 @@ class Header extends Component {
             className="call-to-action meetup grow shadow"
             href="https://www.meetup.com/Dev-London/"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <img
               src={meetup}
