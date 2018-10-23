@@ -14,9 +14,15 @@ class Community extends Component {
         </p>
         <div className="group-listings">
           <div className="group">
-            <div className="logo shadow">
-              <img src={frontend} alt="Front End meetup logo" />
-            </div>
+            <a
+              href="https://www.meetup.com/London-Front-end-Development-Meetup/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="logo shadow grow">
+                <img src={frontend} alt="Front End meetup logo" />
+              </div>
+            </a>
             <h2>London front-end dev meetup</h2>
             <p>
               Hang out and discuss JavaScript, CSS and other front-end related
@@ -27,9 +33,15 @@ class Community extends Component {
             </p>
           </div>
           <div className="group">
-            <div className="logo shadow">
-              <img src={ltux} alt="Front End meetup logo" />
-            </div>
+            <a
+              href="https://www.meetup.com/Ladies-that-UX-London-Ontario/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="logo shadow grow">
+                <img src={ltux} alt="Front End meetup logo" />
+              </div>
+            </a>
             <h2>Ladies that UX (London)</h2>
             <p>
               The Ladies the UX, London chapter is a group of women and men who
@@ -40,9 +52,15 @@ class Community extends Component {
             </p>
           </div>
           <div className="group">
-            <div className="logo shadow">
-              <img src={drupal} alt="Front End meetup logo" />
-            </div>
+            <a
+              href="https://www.meetup.com/londug/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="logo shadow grow">
+                <img src={drupal} alt="Front End meetup logo" />
+              </div>
+            </a>
             <h2>Drupal Users Group</h2>
             <p>
               We alternate between presentations, discussions, sprints and/or

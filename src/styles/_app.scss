@@ -236,10 +236,6 @@ button, .button {
         background-image: url( '../assets/forest-light2.svg' );
         width: 100vw;
     }
-
-    .content {
-
-    }
 }
 
 .community {
@@ -296,6 +292,15 @@ button, .button {
             display: flex;
             align-items: center;
             justify-content: center;
+
+            &.grow {
+                cursor: pointer;
+                transition: all .2s ease-in-out;
+            }
+
+            &:hover {
+                transform: scale( 1.1 );
+            }
 
             img {
                 max-width: 80%;
