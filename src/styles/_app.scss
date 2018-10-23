@@ -23,7 +23,7 @@ header {
     flex-direction: column;
 
     &::before {
-        background-image: url( '../assets/header.jpg' );
+        background-image: url( '../assets/sunset.jpg' );
         background-repeat: none;
         background-position: center bottom;
         background-size: cover;
@@ -66,10 +66,6 @@ header {
         line-height: 1.25em;
         color: $white;
         text-align: center;
-
-        .pop {
-            color: $primary-color;
-        }
     }
 
     p {

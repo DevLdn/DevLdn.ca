@@ -52,9 +52,9 @@ class Header extends Component {
         <div className="handshake">
           <img src={logo} className="logo" alt="Dev London logo" />
           <h1>
-            Bringing tech <span className="pop">together</span>
+            Bringing tech together
             <br />
-            in the <span className="pop">Forest City</span>
+            in the Forest City
           </h1>
         </div>
         <p>
