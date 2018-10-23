@@ -40,9 +40,14 @@ class Info extends Component {
               to give back? See what's available!
             </p>
           </div>
-          <button className="bg-1 shadow">
+          <a
+            className="button bg-1 shadow"
+            href="https://goo.gl/forms/iyx32mXrMsfRdjTw2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Icon name="puzzle" width={30} fill={`#fff`} /> Volunteer
-          </button>
+          </a>
         </div>
         <div className="section">
           <div className="icon">
