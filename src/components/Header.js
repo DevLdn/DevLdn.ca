@@ -58,10 +58,10 @@ class Header extends Component {
           </h1>
         </div>
         <p>
-          Dev London is your opportunity to gather insights and get inspired by
-          the most influential software professionals. Hear their stories, ask
-          them questions, network with others in the industry. Refreshments are
-          on us!
+          <strong>Dev London</strong> is your opportunity to gather insights and
+          get inspired by the most influential software professionals. Hear
+          their stories, ask them questions, network with others in the
+          industry. Refreshments are on us!
         </p>
         <div className="action-container">
           <div className={`call-to-action slack grow shadow ${slack_class}`}>
