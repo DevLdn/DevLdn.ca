@@ -13,10 +13,10 @@ class App extends Component {
         <div className="sponsor">
           <p>Thank you to the generosity of our sponsors</p>
           <div className="sponsor-container">
-            <div className="logo shadow">
+            <div className="logo grow shadow">
               <img src={vehikl} alt="Vehikl logo" />
             </div>
-            <div className="logo shadow" />
+            <div className="logo grow shadow" />
           </div>
         </div>
         <Community />

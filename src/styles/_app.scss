@@ -196,12 +196,20 @@ header {
         font-size: 1em;
         color: $text-color;
     }
+
+    .dark-button {
+        background-color: darken( $primary-color, 10% );
+        transition: background-color 200ms ease;
+
+        &:hover {
+            background-color: darken( $primary-color, 20% );
+            transition: background-color 200ms ease;
+        }
+    }
 }
 
 button, .button {
     padding: 1em 2em;
-    background-color: darken( $primary-color, 10% );
-    transition: background-color 200ms ease;
     display: flex;
     cursor: pointer;
     align-items: center;
@@ -218,8 +226,6 @@ button, .button {
 
     &:hover {
         box-shadow: 0 3px 5px rgba( $black, .2 );
-        background: darken( $primary-color, 20% );
-        transition: background-color 200ms ease;
     }
 }
 
@@ -267,6 +273,15 @@ button, .button {
             justify-content: center;
             overflow: hidden;
             padding: 1em;
+
+            &.grow {
+                cursor: pointer;
+                transition: all .2s ease-in-out;
+            }
+
+            &:hover {
+                transform: scale( 1.1 );
+            }
 
             img {
                 max-width: 80%;
@@ -320,7 +335,7 @@ button, .button {
         align-items: center;
         flex-direction: column;
 
-        .logo {
+        .group-logo {
             background: $white;
             padding: 2em;
             border-radius: 160px;

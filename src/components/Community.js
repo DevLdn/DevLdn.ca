@@ -19,7 +19,7 @@ class Community extends Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className="logo shadow grow">
+              <div className="group-logo shadow grow">
                 <img src={frontend} alt="Front End meetup logo" />
               </div>
             </a>
@@ -38,7 +38,7 @@ class Community extends Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className="logo shadow grow">
+              <div className="group-logo shadow grow">
                 <img src={ltux} alt="Front End meetup logo" />
               </div>
             </a>
@@ -57,7 +57,7 @@ class Community extends Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className="logo shadow grow">
+              <div className="group-logo shadow grow">
                 <img src={drupal} alt="Front End meetup logo" />
               </div>
             </a>
