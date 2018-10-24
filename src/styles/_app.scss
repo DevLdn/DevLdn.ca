@@ -196,20 +196,12 @@ header {
         font-size: 1em;
         color: $text-color;
     }
-
-    .button {
-        background-color: darken($primary-color, 10%);
-        transition: background-color 200ms ease;
-
-        &:hover {
-            background: darken($primary-color, 20%);
-            transition: background-color 200ms ease;
-        }
-    }
 }
 
 button, .button {
     padding: 1em 2em;
+    background-color: darken( $primary-color, 10% );
+    transition: background-color 200ms ease;
     display: flex;
     cursor: pointer;
     align-items: center;
@@ -225,8 +217,9 @@ button, .button {
     }
 
     &:hover {
-        background: darken($primary-color, 10%);
         box-shadow: 0 3px 5px rgba( $black, .2 );
+        background: darken( $primary-color, 20% );
+        transition: background-color 200ms ease;
     }
 }
 
