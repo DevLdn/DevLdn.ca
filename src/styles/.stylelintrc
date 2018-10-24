@@ -5,7 +5,6 @@
         "message": "Lowercase letters are easier to distinguish from numbers"
     } ],
     "at-rule-name-space-after": "always",
-    "at-rule-no-unknown": true,
     "at-rule-no-vendor-prefix": [ true, {
         "message": "Looks like you are trying to prefix. Consider an auto prefixer.",
         "severity": "warning"

@@ -84,9 +84,12 @@ header {
     justify-content: center;
     margin-top: 1em;
     position: relative;
-    width: 950px;
     min-height: 200px;
     z-index: 2;
+
+    @include respond-to( medium ) {
+        max-width: 950px;
+    }
 }
 
 .call-to-action {

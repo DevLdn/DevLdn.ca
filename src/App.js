@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
 import Info from './components/Info';
+import Sponsors from './components/Sponsors';
 import Community from './components/Community';
-import vehikl from './assets/vehikl-square.jpg';
 
 class App extends Component {
   render() {
@@ -10,15 +10,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <Info />
-        <div className="sponsor">
-          <p>Thank you to the generosity of our sponsors</p>
-          <div className="sponsor-container">
-            <div className="logo grow shadow">
-              <img src={vehikl} alt="Vehikl logo" />
-            </div>
-            <div className="logo grow shadow" />
-          </div>
-        </div>
+        <Sponsors />
         <Community />
       </div>
     );
