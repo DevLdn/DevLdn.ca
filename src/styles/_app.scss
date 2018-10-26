@@ -22,6 +22,10 @@ header {
     max-height: 800px;
     flex-direction: column;
 
+    @include respond-below ( small ) {
+        justify-content: space-around;
+    }
+
     &::before {
         background-image: url( '../assets/sunset.jpg' );
         background-repeat: none;
@@ -57,6 +61,14 @@ header {
             height: 150px;
             margin-right: 2em;
         }
+
+        @include respond-below ( small ) {
+            flex-direction: column;
+
+            .logo {
+                margin: 0;
+            }
+        }
     }
 
     h1 {
@@ -66,6 +78,10 @@ header {
         line-height: 1.25em;
         color: $white;
         text-align: center;
+
+        @include respond-below ( small ) {
+            font-size: 2.5em;
+        }
     }
 
     p {
@@ -75,6 +91,11 @@ header {
         max-width: 800px;
         text-align: center;
         line-height: 1.5em;
+
+        @include respond-below ( small ) {
+            display: none;
+            visibility: hidden;
+        }
     }
 }
 
@@ -87,9 +108,37 @@ header {
     position: relative;
     z-index: 2;
 
-    @include respond-to( medium ) {
-        max-width: 950px;
-        width: 950px;
+    @include respond-above( small ) {
+        max-width: 850px;
+        width: 850px;
+    }
+
+    @include respond-below ( small ) {
+        align-items: center;
+        flex-direction: column;
+
+        .call-to-action {
+            margin-bottom: 5em;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            img {
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                top: -3.5em;
+            }
+
+            &.slack {
+                padding-left: 4em;
+            }
+
+            &.meetup {
+                padding-right: 4em;
+            }
+        }
     }
 }
 
@@ -110,6 +159,7 @@ header {
     position: relative;
     text-decoration: none;
     transition: all 200ms ease;
+    white-space: nowrap;
 
     &.slack {
         background: $slack;
@@ -179,6 +229,11 @@ header {
         top: -8em;
         background-image: url( '../assets/skyline.svg' );
         width: 100vw;
+
+        @include respond-below ( small ) {
+            display: none;
+            visibility: hidden;
+        }
     }
 
     .section {
