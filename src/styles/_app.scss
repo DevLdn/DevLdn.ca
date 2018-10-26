@@ -221,6 +221,11 @@ header {
     max-width: 1400px;
     margin: 0 auto;
 
+    @include respond-below ( small ) {
+        flex-direction: column;
+        padding-bottom: 0;
+    }
+
     &::before {
         content: '';
         display: block;
@@ -242,8 +247,23 @@ header {
         align-items: center;
         justify-content: space-between;
         max-width: 350px;
+        padding: 0 1em;
         white-space: pre-wrap;
         z-index: 2;
+
+        @include respond-below ( small ) {
+            margin: 0 auto 3em;
+            max-width: 70vw;
+
+            .icon {
+                display: none;
+                visibility: hidden;
+            }
+
+            .caption {
+                height: auto;
+            }
+        }
     }
 
     h2 {
@@ -252,6 +272,7 @@ header {
         font-weight: 500;
         letter-spacing: 2px;
         color: $text-color;
+        text-align: center;
         margin: .5em 0;
     }
 
@@ -395,6 +416,10 @@ button, .button {
         margin-top: 2em;
         width: 80vw;
         max-width: 1400px;
+
+        @include respond-below ( small ) {
+            flex-wrap: wrap;
+        }
     }
 
     .group {
@@ -403,6 +428,14 @@ button, .button {
         display: flex;
         align-items: center;
         flex-direction: column;
+
+        @include respond-below ( small ) {
+
+            p {
+                display: none;
+                visibility: hidden;
+            }
+        }
 
         .group-logo {
             background: $white;
@@ -415,6 +448,13 @@ button, .button {
             align-items: center;
             justify-content: center;
 
+            @include respond-below ( small ) {
+                height: 120px;
+                width: 120px;
+                padding: 1em;
+                overflow: hidden;
+            }
+
             &.grow {
                 cursor: pointer;
                 transition: all .2s ease-in-out;
@@ -425,6 +465,7 @@ button, .button {
             }
 
             img {
+                max-height: 80%;
                 max-width: 80%;
             }
         }
