@@ -21,27 +21,30 @@ class Header extends Component {
 
   handleSubmit = () => {
     if (!this.state.email) {
-      this.setState({ error: 'you fucked it up' });
+      this.setState({ error: 'Uh oh!' });
       return;
     }
 
     this.setState({ error: null, isLoading: false });
-
-    fetch('http://localhost:3001/invite', {
+    let _this = this;
+    fetch('http://localhost:3002/invite', {
       method: 'post',
       body: JSON.stringify({ email: this.state.email }),
       headers: { 'Content-Type': 'application/json' }
     })
-      .then(res => res.json())
-      .then(json => {
+      .then(async res => {
+        console.log(res);
         this.setState({
           error: null,
           isLoading: false,
           email: '',
-          button: !this.state.button
+          button: !_this.state.button
         });
       })
-      .catch(error => this.setState({ error, isLoading: false }));
+      .catch(error => {
+        console.log(error);
+        this.setState({ error, isLoading: false });
+      });
   };
 
   render() {
@@ -88,6 +91,10 @@ class Header extends Component {
                 </button>
               </div>
             </span>
+            {/* <div className="response">
+              <p className="success">Success! Check your email.</p>
+              <p className="error">Error! Something went wrong.</p>
+            </div> */}
           </div>
           <a
             className="call-to-action meetup grow shadow"

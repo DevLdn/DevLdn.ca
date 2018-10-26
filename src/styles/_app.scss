@@ -79,16 +79,17 @@ header {
 }
 
 .action-container {
-    display: flex;
     align-items: flex-start;
+    display: flex;
     justify-content: center;
     margin-top: 1em;
-    position: relative;
     min-height: 200px;
+    position: relative;
     z-index: 2;
 
     @include respond-to( medium ) {
         max-width: 950px;
+        width: 950px;
     }
 }
 
@@ -148,6 +149,16 @@ header {
 
     &:hover > img {
         transform: scale( 1.1 );
+    }
+
+    .response {
+        position: absolute;
+        top: 2em;
+
+        .success, .error {
+            font-size: 1em;
+            margin-bottom: 0;
+        }
     }
 }
 

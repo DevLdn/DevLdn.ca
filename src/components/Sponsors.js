@@ -16,7 +16,6 @@ class Sponsors extends Component {
               <img src={vehikl} alt="Vehikl logo" />
             </div>
           </a>
-          <div className="logo grow shadow" />
         </div>
       </div>
     );
