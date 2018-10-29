@@ -24,6 +24,7 @@ header {
 
     @include respond-below ( small ) {
         justify-content: space-around;
+        height: 700px;
     }
 
     &::before {
@@ -64,10 +65,34 @@ header {
 
         @include respond-below ( small ) {
             flex-direction: column;
+            max-width: 50vw;
 
             .logo {
-                margin: 0;
+                margin-right: 0;
             }
+
+            h1 {
+                font-size: 1.75em;
+                margin-bottom: 0;
+            }
+        }
+
+        @include respond-above ( small ) {
+            max-width: 70vw;
+
+            h1 {
+                font-size: 2em;
+            }
+        }
+    }
+
+    .headline {
+        display: flex;
+        flex-direction: column;
+        color: $white;
+
+        h1, h2 {
+            margin-bottom: 0;
         }
     }
 
@@ -77,10 +102,16 @@ header {
         font-weight: 900;
         line-height: 1.25em;
         color: $white;
-        text-align: center;
 
         @include respond-below ( small ) {
             font-size: 2.5em;
+            text-align: center;
+        }
+    }
+
+    h2 {
+        @include respond-below ( small ) {
+            text-align: center;
         }
     }
 
@@ -399,6 +430,10 @@ button, .button {
         top: -8em;
         background-image: url( '../assets/forest-light.svg' );
         width: 100vw;
+
+        @include respond-below ( small ) {
+            top: -6em;
+        }
     }
 
     h1 {

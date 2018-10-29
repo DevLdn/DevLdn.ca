@@ -54,17 +54,16 @@ class Header extends Component {
       <header>
         <div className="handshake">
           <img src={logo} className="logo" alt="Dev London logo" />
-          <h1>
-            Bringing tech together
-            <br />
-            in the Forest City
-          </h1>
+          <div className="headline">
+            <h1>Dev London</h1>
+            <h2>Bringing tech together in the Forest City</h2>
+          </div>
         </div>
         <p>
-          <strong>Dev London</strong> is your opportunity to gather insights and
-          get inspired by the most influential software professionals. Hear
-          their stories, ask them questions, network with others in the
-          industry. Refreshments are on us!
+          Dev London is your opportunity to gather insights and get inspired by
+          the most influential software professionals. Hear their stories, ask
+          them questions, network with others in the industry. Refreshments are
+          on us!
         </p>
         <div className="action-container">
           <div className={`call-to-action slack grow shadow ${slack_class}`}>
