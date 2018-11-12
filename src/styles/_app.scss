@@ -350,12 +350,13 @@ button, .button {
 }
 
 .sponsor {
-    height: 350px;
+    min-height: 350px;
     background: $light-green;
     color: $white;
     position: relative;
     margin-top: 10em;
-    padding: 2em 0;
+    padding: 2em 0 10em;
+    text-align: center;
 
     &::before {
         content: '';
@@ -373,11 +374,31 @@ button, .button {
         text-align: center;
     }
 
-    .sponsor-container {
+    h1, h2 {
+        color: $text-color;
+        margin: 0 0 1em;
+    }
+
+    .sponsors-container {
         display: flex;
+        flex-direction: column;
         width: 80vw;
         max-width: 1400px;
         margin: 0 auto;
+        color: $text-color;
+
+        .current {
+            flex: 1;
+            margin-bottom: 3em;
+        }
+
+        .past {
+            flex: 1;
+        }
+    }
+
+    .sponsors {
+        display: flex;
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
@@ -393,6 +414,12 @@ button, .button {
             justify-content: center;
             overflow: hidden;
             padding: 1em;
+
+            /* stylelint-disable */
+            &.wes {
+                background: #252527;
+            }
+            /* stylelint-enable */
 
             &.grow {
                 cursor: pointer;
