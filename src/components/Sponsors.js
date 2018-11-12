@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import vehikl from '../assets/vehikl-square.jpg';
 import wes from '../assets/wes-bos.jpg';
 import ztr from '../assets/ztr.png';
 
