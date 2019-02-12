@@ -17,6 +17,17 @@ class App extends Component {
         <Community />
         <div className="footer">
           <p>
+            Looking for the next step in your career? Check out{' '}
+            <a
+              href="https://www.ledc.com/tech-jobs"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LEDC's job board
+            </a>{' '}
+            for the latest tech jobs in London.
+          </p>
+          <p>
             Keep in touch and we look forward to seeing you at the next Dev
             London event!
           </p>

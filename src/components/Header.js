@@ -11,7 +11,8 @@ class Header extends Component {
       button: true,
       email: '',
       error: null,
-      isLoading: false
+      isLoading: false,
+      success: null
     };
   }
 
@@ -32,19 +33,38 @@ class Header extends Component {
       body: JSON.stringify({ email: this.state.email }),
       headers: { 'Content-Type': 'application/json' }
     })
-      .then(async res => {
-        console.log(res);
-        this.setState({
-          error: null,
-          isLoading: false,
-          email: '',
-          button: !_this.state.button
-        });
+      .then(res => res.json())
+      .then(data => {
+        if (!data.ok) {
+          throw Error(data.error);
+        }
+
+        this.setState(
+          {
+            error: null,
+            isLoading: false,
+            email: '',
+            button: !_this.state.button,
+            success: true
+          },
+          () => setInterval(() => this.setState({ success: null }), 5000)
+        );
       })
       .catch(error => {
         console.log(error);
-        this.setState({ error, isLoading: false });
+        if (error.message && error.message === 'already_in_team') {
+          error.message = "Looks like you're already in our Slack team!";
+        }
+        if (error.message && error.message === 'already_invited') {
+          error.message = "We've already sent you an invite. Check your email!";
+        }
+
+        this.setState({ error, isLoading: false, success: false });
       });
+  };
+
+  hasErrorMessage = () => {
+    return this.state.error && this.state.error.message;
   };
 
   render() {
@@ -73,9 +93,7 @@ class Header extends Component {
               alt="Slack logo"
             />
             <span className="content">
-              <span onClick={this.morphForm.bind(this)}>
-                Join the community
-              </span>
+              <span onClick={() => this.morphForm()}>Join the community</span>
               <div className="form">
                 <input
                   type="text"
@@ -85,15 +103,22 @@ class Header extends Component {
                     this.setState({ [e.target.name]: e.target.value })
                   }
                 />
-                <button className="bg-2 shadow" onClick={this.handleSubmit}>
+                <button
+                  className="bg-2 shadow"
+                  onClick={() => this.handleSubmit()}
+                >
                   Request Invite
                 </button>
               </div>
             </span>
-            {/* <div className="response">
-              <p className="success">Success! Check your email.</p>
-              <p className="error">Error! Something went wrong.</p>
-            </div> */}
+            <div className="response">
+              {this.state.success ? (
+                <p className="success">Invite sent! Check your email!</p>
+              ) : null}
+              {this.hasErrorMessage() ? (
+                <p className="error">{this.state.error.message}</p>
+              ) : null}
+            </div>
           </div>
           <a
             className="call-to-action meetup grow shadow"

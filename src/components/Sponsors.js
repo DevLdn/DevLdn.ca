@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import wes from '../assets/wes-bos.jpg';
-import ztr from '../assets/ztr.png';
+import infotech from '../assets/infotech.svg';
 
 class Sponsors extends Component {
   render() {
@@ -15,6 +15,19 @@ class Sponsors extends Component {
             </p>
             <div className="sponsors">
               <a
+                href="https://www.infotech.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="logo grow shadow">
+                  <img
+                    src={infotech}
+                    class="full-width"
+                    alt="Info Tech Research Group logo"
+                  />
+                </div>
+              </a>
+              <a
                 href="https://wesbos.com/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -23,28 +36,31 @@ class Sponsors extends Component {
                   <img src={wes} alt="Wes Bos logo" />
                 </div>
               </a>
-              <a
-                href="http://ztr.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="logo grow shadow">
-                  <img src={ztr} alt="ZTR Control Systems logo" />
-                </div>
-              </a>
             </div>
           </div>
           <div className="past">
             <h2>Past Sponsors</h2>
             <div className="sponsors-list">
-              <a
-                href="https://vehikl.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Vehikl
-              </a>{' '}
-              (venue sponsor)
+              <div className="sponsor-list-item">
+                <a
+                  href="http://ztr.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  ZTR
+                </a>{' '}
+                (venue sponsor)
+              </div>
+              <div className="sponsor-list-item">
+                <a
+                  href="https://vehikl.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Vehikl
+                </a>{' '}
+                (venue sponsor, Meetup sponsor)
+              </div>
             </div>
           </div>
         </div>

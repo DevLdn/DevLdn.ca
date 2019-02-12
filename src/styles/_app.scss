@@ -433,8 +433,16 @@ button, .button {
             img {
                 max-width: 80%;
                 max-height: 80%;
+
+                .full-width {
+                    max-width: 100%;
+                }
             }
         }
+    }
+
+    .sponsor-list-item {
+        margin-bottom: 1em;
     }
 }
 
@@ -543,6 +551,14 @@ button, .button {
     padding: 3em;
     color: $white;
     text-align: center;
+
+    a {
+        color: $primary-color;
+
+        &:hover {
+            color: $white;
+        }
+    }
 
     .contact {
         color: $white;
